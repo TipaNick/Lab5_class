@@ -6,11 +6,11 @@ namespace Lab5_class
 {
     class Record
     {
-		Kursant kurs;
-		Instructor inst;
-		Manager manag;
+		Kursant kurs = new Kursant();
+		Instructor inst = new Instructor();
+		Manager manag = new Manager();
 		string time;
-		Car cr;
+		Car cr = new Car();
 
 		public Record() { }
 		public Record(Kursant kurs, Instructor inst, Manager manag, String time, Car cr)

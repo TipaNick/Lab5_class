@@ -8,9 +8,9 @@ namespace Lab5_class
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Kursant kursant = new Kursant();
-            kursant.input();
-            kursant.printAll();
+            Record rec = new Record();
+            rec.input();
+            rec.printAll();
         }
     }
 }
