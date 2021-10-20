@@ -19,17 +19,17 @@ namespace Lab5_class
         }
         public void input()
         {
-            Console.Write("Your name: ");
+            Console.Write("Введите имя: ");
             this.fio = Console.ReadLine();
-            Console.Write("Your age: ");
+            Console.Write("Введите возраст: ");
             this.age = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Your phone: ");
+            Console.Write("Введите телефон: ");
             this.phone = Console.ReadLine();
         }
         public void printAll()
         {
-            Console.WriteLine("Name: " + this.fio + ", Age: "
-                + this.age + ", Phone: " + this.phone + "\n");
+            Console.WriteLine("Имя: " + this.fio + ", Возраст: "
+                + this.age + ", Телефон: " + this.phone + "\n");
         }
         public void lvlUp(int num)
         {

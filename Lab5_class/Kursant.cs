@@ -39,8 +39,8 @@ namespace Lab5_class
 
         public void printAll()
         {
-            Console.WriteLine("Name: " + this.fio + ", Age: " + this.age + ", Phone: " + this.phone
-            + ", Email: " + this.email + ", Category: " + category + "\n");
+            Console.WriteLine("Имя: " + this.fio + ", Ворзраст: " + this.age + ", Телефон: " + this.phone
+            + ", Email: " + this.email + ", Категория: " + category + "\n");
         }
         public void lvlUp(int num)
         {

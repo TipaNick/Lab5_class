@@ -17,15 +17,15 @@ namespace Lab5_class
         }
         public void input()
         {
-            Console.Write("Your model: ");
+            Console.Write("Введите модель: ");
             this.model = Console.ReadLine();
 
-            Console.Write("Your num: ");
+            Console.Write("Введите номер: ");
             this.num = Console.ReadLine();
         }
         public void printAll()
         {
-            Console.WriteLine("Model: " + this.model + ", Num: " + this.num + "\n");
+            Console.WriteLine("Модель: " + this.model + ", Номер: " + this.num + "\n");
         }
         public void changeNum(String num)
         {

@@ -26,17 +26,17 @@ namespace Lab5_class
 			this.kurs.input();
 			this.inst.input();
 			this.manag.input();
-			Console.Write("Your time: ");
+			Console.Write("Введите время: ");
 			this.time = Console.ReadLine();
 			this.cr.input();
 		}
 		public void printAll()
 		{
-			Console.WriteLine("Record: \n");
+			Console.WriteLine("Запись: \n");
 			this.kurs.printAll();
 			this.inst.printAll();
 			this.manag.printAll();
-			Console.WriteLine("Time: " + this.time + "\n");
+			Console.WriteLine("Время: " + this.time + "\n");
 			this.cr.printAll();
 		}
 	}
