@@ -30,7 +30,25 @@ namespace Lab5_class
             Console.Write("Введите имя: ");
             this.fio = Console.ReadLine();
             Console.Write("Введите возраст: ");
-            this.age = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                this.age = Convert.ToInt32(Console.ReadLine());
+            } catch (FormatException)
+            {
+                Console.WriteLine("Неправильный ввод.");
+            }
+            if (this.age < 16)
+            {
+                try
+                {
+                    throw new Exception("Возраст мал");
+                } catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                
+            }
+
             Console.Write("Введите телефон: ");
             this.phone = Console.ReadLine();
             Console.Write("Введите почту: ");
@@ -41,7 +59,7 @@ namespace Lab5_class
 
         public void printAll()
         {
-            Console.WriteLine("Имя: " + this.fio + ", Ворзраст: " + this.age + ", Телефон: " + this.phone
+            Console.WriteLine("Имя: " + this.fio + ", Возраст: " + this.age + ", Телефон: " + this.phone
             + ", Email: " + this.email + ", Категория: " + category + "\n");
         }
         public void lvlUp(int num)
@@ -51,7 +69,7 @@ namespace Lab5_class
 
         public static void print_count()
         {
-            Console.WriteLine("Всего студентов: " + count);
+            Console.WriteLine("Всего студентов: " + count + "\n");
         }
     }
 }
