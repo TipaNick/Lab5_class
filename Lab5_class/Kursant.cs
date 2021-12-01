@@ -6,13 +6,14 @@ namespace Lab5_class
 {
     class Kursant
     {
+        static int count = 0;
         string fio;
         int age;
         string phone;
         string email;
         string category;
 
-        public Kursant() { }
+        public Kursant() { count++; }
 
         public Kursant(string fio, int age, string phone, string email, string category)
         {
@@ -21,6 +22,7 @@ namespace Lab5_class
             this.phone = phone;
             this.email = email;
             this.category = category;
+            count++;
         }
 
         public void input()
@@ -45,6 +47,11 @@ namespace Lab5_class
         public void lvlUp(int num)
         {
             this.age += num;
+        }
+
+        public static void print_count()
+        {
+            Console.WriteLine("Всего студентов: " + count);
         }
     }
 }

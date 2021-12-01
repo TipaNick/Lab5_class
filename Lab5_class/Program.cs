@@ -7,9 +7,9 @@ namespace Lab5_class
     {
         static void Main(string[] args)
         {
-            Record rec = new Record();
-            rec.input();
-            rec.printAll();
+            Kursant kurs1 = new Kursant();
+            Kursant kurs2 = new Kursant();
+            Kursant.print_count();
         }
     }
 }
