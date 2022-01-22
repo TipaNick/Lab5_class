@@ -58,9 +58,15 @@ namespace Lab5_class
 				+ this.phone + ", Email: " + this.email + ", Опыт работы: " + exp + "\n");
 		}
 
-		public void lvlUp(int num)
+		public void lvlUp(ref int num)
 		{
+			num++;
 			this.exp += num;
 		}
+
+		public void get_exp(int exp_old, int exp_new, out int result)
+        {
+			result = exp_new + exp_old;
+        }
 	}
 }

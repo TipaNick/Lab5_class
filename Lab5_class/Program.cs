@@ -7,17 +7,13 @@ namespace Lab5_class
     {
         static void Main(string[] args)
         {
-            Instructor[] inst = new Instructor[2];
+            int old_exp = 6;
+            int new_exp = 1;
+            int result;
+            Instructor inst = new Instructor();
+            inst.get_exp(old_exp, new_exp, out result);
+            Console.WriteLine($"Результат: {result}");
 
-            for (int i = 0; i < 2; i++)
-            {
-                inst[i] = new Instructor();
-                inst[i].input();
-            }
-            for(int i = 0; i < 2; i++)
-            {
-                inst[i].printAll();
-            }
         }
     }
 }
