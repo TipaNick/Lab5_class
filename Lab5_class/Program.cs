@@ -5,13 +5,15 @@ namespace Lab5_class
 {
     class Program
     {
+        delegate void Message();
         static void Main(string[] args)
         {
-            Kursant kurs1 = new Kursant();
-            kurs1.input();
-            kurs1.printAll();
-            Kursant kurs2 = new Kursant();
-            Kursant.print_count();
+            Message mes;            
+            mes = Hello;
+            mes();
+
+            void Hello() => Console.WriteLine("Hello Viktor Sergeevich");
+
         }
     }
 }

@@ -13,7 +13,14 @@ namespace Lab5_class
         string email;
         string category;
 
-        public Kursant() { count++; }
+        public Kursant() {
+            this.fio = "ФИО";
+            this.age = 0;
+            this.phone = "+77777777777";
+            this.email = "ad@mail.ru";
+            this.category = "B"; 
+            count++; 
+        }
 
         public Kursant(string fio, int age, string phone, string email, string category)
         {
