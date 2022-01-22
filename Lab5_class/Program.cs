@@ -5,15 +5,19 @@ namespace Lab5_class
 {
     class Program
     {
-        delegate void Message();
         static void Main(string[] args)
         {
-            Message mes;            
-            mes = Hello;
-            mes();
+            Instructor[] inst = new Instructor[2];
 
-            void Hello() => Console.WriteLine("Hello Viktor Sergeevich");
-
+            for (int i = 0; i < 2; i++)
+            {
+                inst[i] = new Instructor();
+                inst[i].input();
+            }
+            for(int i = 0; i < 2; i++)
+            {
+                inst[i].printAll();
+            }
         }
     }
 }

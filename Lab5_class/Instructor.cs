@@ -28,7 +28,7 @@ namespace Lab5_class
 			Console.Write("Введите имя: ");
 			this.fio = Console.ReadLine();
 			Console.Write("Введите возраст: ");
-			this.age = Convert.ToInt32(Console.ReadLine());
+			this.Age = Convert.ToInt32(Console.ReadLine());
 
 			Console.Write("Введите телефон: ");
 			this.phone = Console.ReadLine();
@@ -38,6 +38,18 @@ namespace Lab5_class
 
 			Console.Write("Введите опыт работы: ");
 			this.exp = Convert.ToInt32(Console.ReadLine());
+		}
+		public int Age
+		{
+			set
+			{
+				if (value < 1 || value > 120)
+					Console.WriteLine("Возраст должен быть в диапазоне от 1 до 120");
+				else
+					age = value;
+			}
+			get { return age; }
+			
 		}
 
 		public void printAll()
