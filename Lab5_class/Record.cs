@@ -21,6 +21,14 @@ namespace Lab5_class
 			this.time = time;
 			this.cr = cr;
 		}
+
+		public static Record operator +(Record rec1, Kursant kurs1)
+        {
+			rec1.kurs = kurs1;
+			return rec1;
+        }
+
+
 		public void input()
 		{
 			this.kurs.input();
