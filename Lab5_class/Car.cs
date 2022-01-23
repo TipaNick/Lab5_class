@@ -43,9 +43,9 @@ namespace Lab5_class
         {
             this.num = num + "_Changed";
         }
-        new public void printAll()
+        override public string ToString()
         {
-            Console.WriteLine("Модель: " + this.model + ", Секретный номер: " + this.secret_num + ", Номер: " + this.num + "\n");
+            return ("Модель: " + this.model + ", Номер: " + this.num + ", Секретный номер: " + this.secret_num + "\n");
         }
     }
 }

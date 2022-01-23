@@ -9,7 +9,8 @@ namespace Lab5_class
         {
             Car cr1 = new Car("Benz", "112");
             Audi cr2 = new Audi("Audi", "321", 777);
-            cr2.printAll();
+            Console.WriteLine(cr2.ToString());
+            
         }
     }
 }
