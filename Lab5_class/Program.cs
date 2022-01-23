@@ -7,9 +7,12 @@ namespace Lab5_class
     {
         static void Main(string[] args)
         {
-            Car cr1 = new Car("Benz", "112");
-            Audi cr2 = new Audi("Audi", "321", 777);
-            Console.WriteLine(cr2.ToString());
+            Car cr1 = new Car("Audi", "123");
+            Car cr2 = new Car("Audi", "321");
+            cr1.printAll();
+            cr2.printAll();
+            cr2 = cr1;
+            cr2.printAll();
             
         }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab5_class
 {
-    class Car
+    class Car : ICloneable
     {
         protected string model;
         protected string num;
@@ -14,6 +14,10 @@ namespace Lab5_class
         {
             this.model = model;
             this.num = num;
+        }
+        public object Clone()
+        {
+            return new Car(model, num);
         }
         public void input()
         {
@@ -32,7 +36,11 @@ namespace Lab5_class
             this.num = num;
         }
     }
-    class Audi : Car
+    public interface ICloneable
+    {
+        object Clone();
+    }
+    class Audi : Car, ICloneable
     {
         private int secret_num;
         public Audi(String model, String num, int secret_num) : base(model, num)
@@ -46,6 +54,11 @@ namespace Lab5_class
         override public string ToString()
         {
             return ("Модель: " + this.model + ", Номер: " + this.num + ", Секретный номер: " + this.secret_num + "\n");
+        }
+        //Мелкое копирование
+        public object Clone()
+        {
+            return new Audi(model, num, secret_num);
         }
     }
 }
