@@ -6,8 +6,8 @@ namespace Lab5_class
 {
     class Car
     {
-        string model;
-        string num;
+        protected string model;
+        protected string num;
 
         public Car() { }
         public Car(String model, String num)
@@ -30,6 +30,22 @@ namespace Lab5_class
         public void changeNum(String num)
         {
             this.num = num;
+        }
+    }
+    class Audi : Car
+    {
+        private int secret_num;
+        public Audi(String model, String num, int secret_num) : base(model, num)
+        {
+            this.secret_num = secret_num;
+        }
+        new public void changeNum(String num)
+        {
+            this.num = num + "_Changed";
+        }
+        new public void printAll()
+        {
+            Console.WriteLine("Модель: " + this.model + ", Секретный номер: " + this.secret_num + ", Номер: " + this.num + "\n");
         }
     }
 }

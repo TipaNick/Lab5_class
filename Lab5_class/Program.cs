@@ -7,12 +7,9 @@ namespace Lab5_class
     {
         static void Main(string[] args)
         {
-            Record rec = new Record();
-            Kursant kurs = new Kursant("Чел", 12, "+79123", "pa@mail.ru", "B");
-            rec.printAll();
-            rec += kurs;
-            rec.printAll();
-
+            Car cr1 = new Car("Benz", "112");
+            Audi cr2 = new Audi("Audi", "321", 777);
+            cr2.printAll();
         }
     }
 }
